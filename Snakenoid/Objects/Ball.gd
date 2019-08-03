@@ -1,14 +1,27 @@
 extends KinematicBody2D
 
-var direction = Vector2(0.3,1)
+signal dead
+
+export var vel_module = 300
+var direction = Vector2(0.3,1)#ball direction
+
 func _physics_process(delta):
-	var collision = move_and_collide(direction.normalized()*100*delta)
+	var collision = move_and_collide(direction.normalized()*vel_module*delta)
 	if collision != null:
-		#var collisor_velocity = collision.collider_velocity.normalized()
-		var collisor_normal = collision.normal
-		var pivot_position = collision.collider.get_pivot_position()
-		var colliding_position = collision.position
-		var ricochet_direction = colliding_position - pivot_position
-		ricochet_direction = ricochet_direction.normalized()
-		direction = ricochet_direction
-		#direction = collisor_normal + collisor_velocity
+		var col_layer = collision.collider.get_collision_layer()
+		match col_layer:
+			2:#platform
+				#redirecting ball
+				var pivot_position = collision.collider.get_pivot_position()
+				var colliding_position = collision.position
+				var ricochet_direction = colliding_position - pivot_position
+				ricochet_direction = ricochet_direction.normalized()
+				direction = ricochet_direction
+			4:#edge
+				#death
+				_death()
+				pass
+
+func _death():
+	emit_signal("dead")
+	queue_free()
