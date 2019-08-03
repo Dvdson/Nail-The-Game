@@ -6,6 +6,7 @@ var type = TYPE_HEAD setget set_type#start as head
 
 func _ready():
 	set_type(TYPE_HEAD)
+	$"../".printar()
 	
 func set_type(new_type):
 	type = new_type
@@ -15,13 +16,13 @@ func set_type(new_type):
 	match type:
 		#changing collisions
 		TYPE_ASS:
-			set_collision_layer_bit(8, true)
+			set_collision_layer_bit(8, true)#set layer ass
 			set_collision_mask_bit(8, false)
 		TYPE_BODY:
-			set_collision_layer_bit(7, true)
+			set_collision_layer_bit(7, true)#set layer body
 			set_collision_mask_bit(8, false)#dont collides with ass
 		TYPE_HEAD:
-			set_collision_layer_bit(6, true)
+			set_collision_layer_bit(6, true)#set layer head
 			set_collision_mask_bit(8, true)#collides with ass
 
 #properties
@@ -40,6 +41,9 @@ func _physics_process(delta):
 				var ricochet_direction = colliding_position - pivot_position
 				ricochet_direction = ricochet_direction.normalized()
 				direction = ricochet_direction
+				#spawn phantom
+			32:#phantom
+				pass
 			4:#edge
 				#death
 				_death()
@@ -47,6 +51,9 @@ func _physics_process(delta):
 			16:#food
 				_grow_snake()
 				pass
+
+func _spawn_phantom(position):
+	pass
 
 func _death():
 	emit_signal("dead")

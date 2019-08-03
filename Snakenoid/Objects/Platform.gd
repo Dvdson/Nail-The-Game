@@ -1,6 +1,7 @@
 extends KinematicBody2D
 enum {TYPE_NORMAL, TYPE_PHANTOM}
 var type = TYPE_NORMAL setget set_type
+export var vel_module = 900
 
 func set_type(new_type):
 	type = new_type
@@ -8,11 +9,18 @@ func set_type(new_type):
 		TYPE_NORMAL:
 			set_collision_layer_bit(1, true)#platform true
 			set_collision_layer_bit(5, false)#phantom false
+			set_collision_mask_bit(6, true) #collides with head
+			set_collision_mask_bit(7, false) #dont collides with body
+			set_collision_mask_bit(8, false) #dont collides with ass
+			$icon.modulate = Color("#ffffff")
 		TYPE_PHANTOM:
 			set_collision_layer_bit(1, false)
 			set_collision_layer_bit(5, true)
+			set_collision_mask_bit(6, false) #dont collides with head
+			set_collision_mask_bit(7, true) #collides with body
+			set_collision_mask_bit(8,true) #collides with ass
+			$icon.modulate = Color("#74ffffff")
 
-export var vel_module = 900
 func _physics_process(delta):
 	var velocity = Vector2()
 	if Input.is_action_pressed("button_left"):
