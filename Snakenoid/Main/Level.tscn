@@ -1,31 +1,28 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Objects/Snake/Head.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/Platform.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/MapEdge.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Objects/Food.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/MapEdge.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Food.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Snake/Ball.tscn" type="PackedScene" id=4]
 
 [node name="Level" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 354.679, 109.645 )
-
-[node name="Platform" parent="." instance=ExtResource( 2 )]
+[node name="Platform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1024, 300 )
 scale = Vector2( 2, 3 )
 
-[node name="Platform2" parent="." instance=ExtResource( 2 )]
+[node name="Platform2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 600 )
 rotation = 1.5708
 scale = Vector2( 2, 3 )
 vel_module = 1200
 
-[node name="Platform3" parent="." instance=ExtResource( 2 )]
+[node name="Platform3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, 300 )
 rotation = 3.14159
 scale = Vector2( 2, 3 )
 
-[node name="Platform4" parent="." instance=ExtResource( 2 )]
+[node name="Platform4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 0 )
 rotation = -1.5708
 scale = Vector2( 2, 3 )
@@ -35,19 +32,22 @@ vel_module = 1200
 position = Vector2( 1032.02, 304.148 )
 rotation = 1.5708
 
-[node name="MapEdge" parent="Edges" instance=ExtResource( 3 )]
+[node name="MapEdge" parent="Edges" instance=ExtResource( 2 )]
 position = Vector2( -312.754, 520.024 )
 rotation = -1.5708
 
-[node name="MapEdge2" parent="Edges" instance=ExtResource( 3 )]
+[node name="MapEdge2" parent="Edges" instance=ExtResource( 2 )]
 position = Vector2( 301.651, 525.576 )
 rotation = -1.5708
 
-[node name="MapEdge3" parent="Edges" instance=ExtResource( 3 )]
+[node name="MapEdge3" parent="Edges" instance=ExtResource( 2 )]
 position = Vector2( -1.85056, 1038.2 )
 
-[node name="MapEdge4" parent="Edges" instance=ExtResource( 3 )]
+[node name="MapEdge4" parent="Edges" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
 
-[node name="Food" parent="." instance=ExtResource( 4 )]
+[node name="Food" parent="." instance=ExtResource( 3 )]
 position = Vector2( 426.321, 238.653 )
+
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 257.156, 156.399 )
