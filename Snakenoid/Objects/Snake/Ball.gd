@@ -4,10 +4,6 @@ signal dead
 enum {TYPE_ASS, TYPE_BODY, TYPE_HEAD}
 var type = TYPE_HEAD setget set_type#start as head
 
-func _ready():
-	set_type(TYPE_HEAD)
-	$"../".printar()
-	
 func set_type(new_type):
 	type = new_type
 	set_collision_layer_bit(6, false)
@@ -42,6 +38,7 @@ func _physics_process(delta):
 				ricochet_direction = ricochet_direction.normalized()
 				direction = ricochet_direction
 				#spawn phantom
+				#_spawn_phantom(collision.collider.position)
 			32:#phantom
 				pass
 			4:#edge
@@ -52,7 +49,8 @@ func _physics_process(delta):
 				_grow_snake()
 				pass
 
-func _spawn_phantom(position):
+func _spawn_phantom(positionn):
+	$"../".spawn_phantom_platform(positionn)
 	pass
 
 func _death():

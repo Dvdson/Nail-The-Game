@@ -31,7 +31,7 @@ position = Vector2( 0, 0 )
 position = Vector2( 426.321, 238.653 )
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
-position = Vector2( 257.156, 156.399 )
+position = Vector2( 379.13, 182.707 )
 
 [node name="Platforms" type="Node2D" parent="."]
 
