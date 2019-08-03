@@ -3,9 +3,8 @@
 [ext_resource path="res://Objects/Platform.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 7.65875
-height = 37.2866
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.08099, 26.5787 )
 
 [node name="Platform" type="KinematicBody2D"]
 collision_layer = 2

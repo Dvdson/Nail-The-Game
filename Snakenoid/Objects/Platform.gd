@@ -37,7 +37,7 @@ func _physics_process(delta):
 			velocity.y += 1.0
 		velocity *= vel_module
 		velocity = velocity.rotated(rotation)
-		move_and_collide(velocity*delta)
+		move_and_slide_with_snap(velocity, Vector2(0,1))
 
 func get_pivot_position():
 	return $"Position2D".get_global_position()
