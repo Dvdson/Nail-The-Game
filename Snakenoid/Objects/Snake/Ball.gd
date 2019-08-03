@@ -38,7 +38,7 @@ func _physics_process(delta):
 				ricochet_direction = ricochet_direction.normalized()
 				direction = ricochet_direction
 				#spawn phantom
-				#_spawn_phantom(collision.collider.position)
+				_spawn_phantom(collision.collider.get_transform())
 			32:#phantom
 				pass
 			4:#edge
@@ -49,8 +49,8 @@ func _physics_process(delta):
 				_grow_snake()
 				pass
 
-func _spawn_phantom(positionn):
-	$"../".spawn_phantom_platform(positionn)
+func _spawn_phantom(transf):
+	$"../".spawn_phantom_platform(transf)
 	pass
 
 func _death():
