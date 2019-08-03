@@ -3,8 +3,8 @@
 [ext_resource path="res://Main/Level.gd" type="Script" id=1]
 [ext_resource path="res://Objects/MapEdge.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Food.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Objects/Snake/Ball.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/Platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://NewSnake/RigidSnake.tscn" type="PackedScene" id=5]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 1 )
@@ -30,30 +30,31 @@ position = Vector2( -0.148041, -1.97998 )
 [node name="Food" parent="." instance=ExtResource( 3 )]
 position = Vector2( 426.321, 238.653 )
 
-[node name="Ball" parent="." instance=ExtResource( 4 )]
-position = Vector2( 379.13, 182.707 )
-
 [node name="Platforms" type="Node2D" parent="."]
 
-[node name="Platform" parent="Platforms" instance=ExtResource( 5 )]
+[node name="Platform" parent="Platforms" instance=ExtResource( 4 )]
 position = Vector2( 1042, 300 )
 scale = Vector2( 2, 3 )
 
-[node name="Platform2" parent="Platforms" instance=ExtResource( 5 )]
+[node name="Platform2" parent="Platforms" instance=ExtResource( 4 )]
 position = Vector2( 494, 619 )
 rotation = 1.5708
 scale = Vector2( 2, 3 )
 vel_module = 1200
 
-[node name="Platform3" parent="Platforms" instance=ExtResource( 5 )]
+[node name="Platform3" parent="Platforms" instance=ExtResource( 4 )]
 position = Vector2( -19, 300 )
 rotation = 3.14159
 scale = Vector2( 2, 3 )
 
-[node name="Platform4" parent="Platforms" instance=ExtResource( 5 )]
+[node name="Platform4" parent="Platforms" instance=ExtResource( 4 )]
 position = Vector2( 513, -19 )
 rotation = -1.5708
 scale = Vector2( 2, 3 )
 vel_module = 1200
 
 [node name="PhantomPlatforms" type="Node2D" parent="."]
+
+[node name="RigidSnake" parent="." instance=ExtResource( 5 )]
+position = Vector2( 309, 151 )
+[connection signal="food_collected" from="Food" to="." method="_on_Food_food_collected"]

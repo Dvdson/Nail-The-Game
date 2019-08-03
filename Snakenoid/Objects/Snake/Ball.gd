@@ -29,6 +29,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(direction.normalized()*vel_module*delta)
 	if collision != null:
 		var col_layer = collision.collider.get_collision_layer()
+		print(col_layer)
 		match col_layer:
 			2:#platform
 				#redirecting ball
@@ -40,13 +41,12 @@ func _physics_process(delta):
 				#spawn phantom
 				_spawn_phantom(collision.collider.get_transform())
 			32:#phantom
-				pass
+				if type == TYPE_ASS:
+					#destroy phantom
+					collision.collider.queue_free()
 			4:#edge
 				#death
 				_death()
-				pass
-			16:#food
-				_grow_snake()
 				pass
 
 func _spawn_phantom(transf):
@@ -55,8 +55,6 @@ func _spawn_phantom(transf):
 
 func _death():
 	emit_signal("dead")
+	queue_free()
 	#animation and feedback
 	print("dead")
-
-func _grow_snake():
-	pass

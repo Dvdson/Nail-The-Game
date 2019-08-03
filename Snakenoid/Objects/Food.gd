@@ -1,7 +1,9 @@
 extends Area2D
+signal food_collected
 
 func _on_Food_body_entered(body):
 	if body.get_collision_layer() == 72:
+		emit_signal("food_collected")
 		_respawn()
 
 func _respawn():
