@@ -56,5 +56,5 @@ vel_module = 1200
 [node name="PhantomPlatforms" type="Node2D" parent="."]
 
 [node name="RigidSnake" parent="." instance=ExtResource( 5 )]
-position = Vector2( 309, 151 )
+position = Vector2( 323, 146 )
 [connection signal="food_collected" from="Food" to="." method="_on_Food_food_collected"]

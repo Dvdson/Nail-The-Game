@@ -6,8 +6,8 @@ radius = 27.8054
 [node name="SnakePart" type="RigidBody2D"]
 collision_layer = 0
 collision_mask = 0
-mass = 0.227551
 gravity_scale = 0.0
+continuous_cd = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
