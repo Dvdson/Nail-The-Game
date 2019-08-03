@@ -2,7 +2,8 @@ extends KinematicBody2D
 
 signal dead
 
-export var vel_module = 300
+#properties
+var vel_module = 300
 var direction = Vector2(0.3,1)#ball direction
 
 func _physics_process(delta):

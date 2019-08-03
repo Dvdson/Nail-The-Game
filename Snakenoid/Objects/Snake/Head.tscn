@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Objects/Ball.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Snake/Head.gd" type="Script" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 18.9777
 
-[node name="Node2D" type="KinematicBody2D"]
+[node name="Head" type="KinematicBody2D"]
 collision_layer = 8
 collision_mask = 6
 script = ExtResource( 1 )
