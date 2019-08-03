@@ -18,5 +18,5 @@ func _on_head_body_entered(body):
 		var pivot_position = body.get_pivot_position()
 		var colliding_position = contact_pos
 		var ricochet_direction = colliding_position - pivot_position
-		print (linear_velocity.length())
+		#print (linear_velocity.length())
 		apply_central_impulse(ricochet_direction.normalized()*force_module)
