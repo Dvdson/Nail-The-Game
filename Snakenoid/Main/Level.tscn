@@ -18,6 +18,7 @@ scale = Vector2( 2, 3 )
 position = Vector2( 512, 600 )
 rotation = 1.5708
 scale = Vector2( 2, 3 )
+vel_module = 1200
 
 [node name="Platform3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, 300 )
@@ -28,6 +29,7 @@ scale = Vector2( 2, 3 )
 position = Vector2( 512, 0 )
 rotation = -1.5708
 scale = Vector2( 2, 3 )
+vel_module = 1200
 
 [node name="Edges" type="Node2D" parent="."]
 position = Vector2( 1032.02, 304.148 )

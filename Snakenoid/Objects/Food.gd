@@ -5,6 +5,6 @@ func _on_Food_body_entered(body):
 		_respawn()
 
 func _respawn():
-	var x = rand_range(100, 800)
-	var y = rand_range(100,600)
+	var x = rand_range(200, 800)
+	var y = rand_range(200,450)
 	position = Vector2(x, y)

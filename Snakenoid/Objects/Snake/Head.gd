@@ -22,7 +22,13 @@ func _physics_process(delta):
 				#death
 				_death()
 				pass
+			16:#food
+				_grow_snake()
+				pass
 
 func _death():
 	emit_signal("dead")
 	queue_free()
+
+func _grow_snake():
+	pass
