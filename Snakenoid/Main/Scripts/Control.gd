@@ -1,7 +1,10 @@
 extends Control
 
 var selected = 0
+
+var scenes = ["res://Main/Level.tscn"]
 onready var sel_list = [$"select_start", $"select_credits"]
+
 
 func set_selected(val):
 	for index in range(sel_list.size()):
@@ -12,6 +15,12 @@ func set_selected(val):
 			sel_list[index].set_visible(false)
 
 func _process(delta):
+	
+	if Input.is_action_just_pressed("ui_enter"):
+		if(selected < scenes.size()):
+			get_tree().change_scene(scenes[selected])
+		print(sel_list[selected].name, " foi selecionado")
+		
 	if Input.is_action_pressed("ui_up"):
 		if(selected > 0):
 			set_selected(selected - 1)

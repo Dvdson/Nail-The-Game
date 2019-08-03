@@ -37,6 +37,11 @@ button_right={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
  ]
 }
+ui_enter={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [layer_names]
 
@@ -44,10 +49,6 @@ button_right={
 2d_physics/layer_3="Edge"
 2d_physics/layer_4="Ball"
 2d_physics/layer_5="Food"
-2d_physics/layer_6="PhantomPlatform"
-2d_physics/layer_7="Head"
-2d_physics/layer_8="Body"
-2d_physics/layer_9="Ass"
 
 [rendering]
 
