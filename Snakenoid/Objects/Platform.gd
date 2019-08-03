@@ -6,8 +6,8 @@ func set_type(new_type):
 	type = new_type
 	match type:
 		TYPE_NORMAL:
-			set_collision_layer_bit(1, true)
-			set_collision_layer_bit(5, false)
+			set_collision_layer_bit(1, true)#platform true
+			set_collision_layer_bit(5, false)#phantom false
 		TYPE_PHANTOM:
 			set_collision_layer_bit(1, false)
 			set_collision_layer_bit(5, true)

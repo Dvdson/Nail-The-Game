@@ -4,16 +4,25 @@ signal dead
 enum {TYPE_ASS, TYPE_BODY, TYPE_HEAD}
 var type = TYPE_HEAD setget set_type#start as head
 
+func _ready():
+	set_type(TYPE_HEAD)
+	
 func set_type(new_type):
 	type = new_type
+	set_collision_layer_bit(6, false)
+	set_collision_layer_bit(7, false)
+	set_collision_layer_bit(8,false)
 	match type:
 		#changing collisions
 		TYPE_ASS:
-			pass
+			set_collision_layer_bit(8, true)
+			set_collision_mask_bit(8, false)
 		TYPE_BODY:
-			pass
+			set_collision_layer_bit(7, true)
+			set_collision_mask_bit(8, false)#dont collides with ass
 		TYPE_HEAD:
-			pass
+			set_collision_layer_bit(6, true)
+			set_collision_mask_bit(8, true)#collides with ass
 
 #properties
 var vel_module = 300

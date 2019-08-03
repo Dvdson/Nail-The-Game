@@ -45,6 +45,9 @@ button_right={
 2d_physics/layer_4="Ball"
 2d_physics/layer_5="Food"
 2d_physics/layer_6="PhantomPlatform"
+2d_physics/layer_7="Head"
+2d_physics/layer_8="Body"
+2d_physics/layer_9="Ass"
 
 [rendering]
 
