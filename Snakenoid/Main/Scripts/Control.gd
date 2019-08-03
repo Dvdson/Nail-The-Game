@@ -2,7 +2,7 @@ extends Control
 
 var selected = 0
 
-var scenes = ["res://Main/Level.tscn"]
+var scenes = ["res://Main/Level.tscn", "res://Main/Creditos.tscn"]
 onready var sel_list = [$"select_start", $"select_credits"]
 
 
@@ -19,7 +19,6 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_enter"):
 		if(selected < scenes.size()):
 			get_tree().change_scene(scenes[selected])
-		print(sel_list[selected].name, " foi selecionado")
 		
 	if Input.is_action_pressed("ui_up"):
 		if(selected > 0):
