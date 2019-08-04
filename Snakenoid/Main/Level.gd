@@ -15,8 +15,21 @@ func _on_Food_food_collected():
 	pass
 
 func _on_Ball_dead():
+	var score = File.new()
+	if(!score.file_exists("res://Objects/score")):
+		score.open("res://Objects/score", File.WRITE_READ)
+		score.store_string(str(0))
+		score.close()
+		
+	score.open("res://Objects/score", File.READ_WRITE)
+	
+	if size > int(score.get_as_text()):
+		score.store_string(str(size))
+		pass
+		
 	game_end = true
 	loose_screen.show_it()
+	score.close()
 
 func _process(delta):
 	if game_end:
