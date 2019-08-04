@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main/Level.gd" type="Script" id=1]
 [ext_resource path="res://Objects/MapEdge.tscn" type="PackedScene" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://Objects/Platform.gd" type="Script" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://Objects/Platform.tscn" type="PackedScene" id=6]
-[ext_resource path="res://NewSnake/RigidSnake.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Snake/Ball.tscn" type="PackedScene" id=7]
+[ext_resource path="res://SlitSnake/BodySlit.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.7273, 26.5787 )
@@ -94,6 +95,9 @@ vel_module = 1400
 
 [node name="PhantomPlatforms" type="Node2D" parent="."]
 
-[node name="RigidSnake" parent="." instance=ExtResource( 7 )]
-position = Vector2( 323, 146 )
+[node name="Ball" parent="." instance=ExtResource( 7 )]
+position = Vector2( 283, 175 )
+
+[node name="BodySlit" parent="Ball" instance=ExtResource( 8 )]
+show_behind_parent = true
 [connection signal="food_collected" from="Food" to="." method="_on_Food_food_collected"]
