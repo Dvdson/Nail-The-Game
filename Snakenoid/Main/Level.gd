@@ -5,7 +5,6 @@ onready var loose_screen = get_node("LooseScreen")
 var size = 0
 var game_end = false
 
-
 func _on_Food_food_collected():
 	var new_body = packedBody.instance()
 	last_body.call_deferred("add_child", new_body)

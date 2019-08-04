@@ -35,17 +35,17 @@ position = Vector2( 426.321, 238.653 )
 [node name="Platforms" type="Node2D" parent="."]
 
 [node name="Platform2" parent="Platforms" instance=ExtResource( 4 )]
-position = Vector2( 510, 620 )
+position = Vector2( 509, 616 )
 rotation = 1.5708
 scale = Vector2( 2, 3 )
 
 [node name="Platform4" parent="Platforms" instance=ExtResource( 4 )]
-position = Vector2( 499, -18 )
+position = Vector2( 499, -16 )
 rotation = -1.5708
 scale = Vector2( 2, 3 )
 
 [node name="PlatformInverse" parent="Platforms" instance=ExtResource( 5 )]
-position = Vector2( 50, 293 )
+position = Vector2( 54, 293 )
 scale = Vector2( 2, 3 )
 
 [node name="PlatformInverse2" parent="Platforms" instance=ExtResource( 5 )]
