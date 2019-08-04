@@ -6,6 +6,7 @@ var size = 0
 var game_end = false
 
 func _on_Food_food_collected():
+	$Node/eat.play()
 	var new_body = packedBody.instance()
 	last_body.call_deferred("add_child", new_body)
 	last_body = new_body

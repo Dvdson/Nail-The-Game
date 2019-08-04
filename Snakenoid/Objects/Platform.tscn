@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/Platform.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/platform.png" type="Texture" id=2]
 
 [node name="Platform" type="KinematicBody2D" groups=[
 "Platform",
@@ -14,9 +14,10 @@ script = ExtResource( 1 )
 position = Vector2( -17.7273, 0 )
 polygon = PoolVector2Array( -6.2727, -26, -8.2727, -23, -8.2727, 23, -6.2727, 26, 6.7273, 26, 8.7273, 23, 8.7273, -23, 6.7273, -26 )
 
-[node name="icon" type="Sprite" parent="."]
-position = Vector2( -17.7372, 0 )
-scale = Vector2( 0.263619, 0.8132 )
+[node name="platform" type="Sprite" parent="."]
+position = Vector2( -17, 0.720266 )
+rotation = -1.57079
+scale = Vector2( 0.13393, 0.120628 )
 texture = ExtResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="."]

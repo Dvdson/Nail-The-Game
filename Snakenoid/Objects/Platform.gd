@@ -39,7 +39,7 @@ func _physics_process(delta):
 			velocity.y += 1.0 * strength
 		if Input.is_action_pressed("square"):
 			run = 3
-		print(velocity)
+		#print(velocity)
 		velocity *= (vel_module * run)
 		velocity = velocity.rotated(rotation)
 		call_deferred("move_and_slide", velocity)

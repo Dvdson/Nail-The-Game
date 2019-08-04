@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main/Level.gd" type="Script" id=1]
 [ext_resource path="res://Objects/MapEdge.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Objects/PlatformInverse.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/Snake/Ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Main/LooseScreen.gd" type="Script" id=7]
+[ext_resource path="res://SFX/eat_01.wav" type="AudioStream" id=8]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 1 )
@@ -96,5 +97,10 @@ margin_top = -7.0
 margin_right = 127.5
 margin_bottom = 7.0
 text = "Você perdeu, pressione esc (X) para sair"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="eat" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 8 )
 [connection signal="food_collected" from="Food" to="." method="_on_Food_food_collected"]
 [connection signal="dead" from="Ball" to="." method="_on_Ball_dead"]
