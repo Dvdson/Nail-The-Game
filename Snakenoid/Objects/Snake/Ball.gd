@@ -39,6 +39,7 @@ func _physics_process(delta):
 				var pivot_position = collision.collider.get_pivot_position()
 				var colliding_position = collision.position
 				var ricochet_direction = colliding_position - pivot_position
+				#var ricochet_direction = pivot_position - colliding_position
 				ricochet_direction = ricochet_direction.normalized()
 				direction = ricochet_direction
 				#spawn phantom

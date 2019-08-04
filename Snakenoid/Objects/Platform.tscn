@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/Platform.gd" type="Script" id=1]
 
+<<<<<<< HEAD
+=======
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.7273, 25 )
 
@@ -9,17 +11,17 @@ extents = Vector2( 7.7273, 25 )
 flags = 4
 load_path = "res://.import/plataformer.png-17fc383d75b1b032d07c688e88ac088d.stex"
 
+>>>>>>> 6b7b052d2541b8fc50400eac92ca28f6e1dcb024
 [node name="Platform" type="KinematicBody2D" groups=[
 "Platform",
 ]]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource( 1 )
-vel_module = 400
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -17.7273, 0 )
-shape = SubResource( 1 )
+polygon = PoolVector2Array( -6.2727, -26, -8.2727, -23, -8.2727, 23, -6.2727, 26, 6.7273, 26, 8.7273, 23, 8.7273, -23, 6.7273, -26 )
 
 [node name="icon" type="Sprite" parent="."]
 position = Vector2( -17.7372, 0 )
