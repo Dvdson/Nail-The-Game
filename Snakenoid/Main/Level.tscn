@@ -46,6 +46,7 @@ scale = Vector2( 2, 3 )
 collision_layer = 2
 collision_mask = 4
 script = ExtResource( 4 )
+vel_module = 500
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform"]
 position = Vector2( -17.7273, 0 )
@@ -63,7 +64,7 @@ position = Vector2( -39.5, 0 )
 position = Vector2( 494, 619 )
 rotation = 1.5708
 scale = Vector2( 2, 3 )
-vel_module = 1400
+vel_module = 1000
 
 [node name="Platform3" type="KinematicBody2D" parent="Platforms" groups=[
 "Platform",
@@ -74,6 +75,7 @@ scale = Vector2( 2, 3 )
 collision_layer = 2
 collision_mask = 4
 script = ExtResource( 4 )
+vel_module = 500
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform3"]
 position = Vector2( -17.7273, 0 )
@@ -91,7 +93,7 @@ position = Vector2( -39.5, -7.62939e-005 )
 position = Vector2( 513, -19 )
 rotation = -1.5708
 scale = Vector2( 2, 3 )
-vel_module = 1400
+vel_module = 1000
 
 [node name="PhantomPlatforms" type="Node2D" parent="."]
 
@@ -99,5 +101,6 @@ vel_module = 1400
 position = Vector2( 283, 175 )
 
 [node name="BodySlit" parent="Ball" instance=ExtResource( 8 )]
-show_behind_parent = true
+
+[node name="BodySlit" parent="Ball/BodySlit" instance=ExtResource( 8 )]
 [connection signal="food_collected" from="Food" to="." method="_on_Food_food_collected"]
