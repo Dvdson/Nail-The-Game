@@ -38,20 +38,18 @@ position = Vector2( 426.321, 238.653 )
 position = Vector2( 510, 620 )
 rotation = 1.5708
 scale = Vector2( 2, 3 )
-vel_module = 700
 
 [node name="Platform4" parent="Platforms" instance=ExtResource( 4 )]
-position = Vector2( 500, -20 )
+position = Vector2( 499, -18 )
 rotation = -1.5708
 scale = Vector2( 2, 3 )
-vel_module = 700
 
 [node name="PlatformInverse" parent="Platforms" instance=ExtResource( 5 )]
-position = Vector2( 54, 300 )
+position = Vector2( 50, 293 )
 scale = Vector2( 2, 3 )
 
 [node name="PlatformInverse2" parent="Platforms" instance=ExtResource( 5 )]
-position = Vector2( 970, 307 )
+position = Vector2( 970, 300 )
 rotation = -3.14159
 scale = Vector2( 2, 3 )
 
