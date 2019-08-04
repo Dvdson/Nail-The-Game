@@ -58,6 +58,7 @@ ui_esc={
 2d_physics/layer_7="Head"
 2d_physics/layer_8="Body"
 2d_physics/layer_9="Ass"
+2d_physics/layer_10="New_Body"
 
 [rendering]
 

@@ -32,7 +32,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(direction.normalized()*vel_module*delta)
 	if collision != null:
 		var col_layer = collision.collider.get_collision_layer()
-		print(col_layer)
+		#print(col_layer)
 		match col_layer:
 			2:#platform
 				#redirecting ball
