@@ -1,12 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Main/Scripts/Main menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/grass.png" type="Texture" id=2]
 [ext_resource path="res://Main/Scripts/Control.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/but_x.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/but_square.png" type="Texture" id=5]
-[ext_resource path="res://Assets/fonts/gnu-unifont/new_dynamicfont.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Sprites/but.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Snake.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Assets/fonts/gnu-unifont/unifont.ttf"
@@ -114,17 +111,17 @@ margin_bottom = 212.0
 script = ExtResource( 3 )
 
 [node name="select_start" type="TextureRect" parent="Control"]
-margin_left = 149.0
-margin_top = 314.0
-margin_right = 204.0
-margin_bottom = 369.0
+margin_left = 167.697
+margin_top = 326.873
+margin_right = 199.697
+margin_bottom = 358.873
 texture = ExtResource( 4 )
 
 [node name="select_credits" type="TextureRect" parent="Control"]
-margin_left = 641.0
-margin_top = 314.0
-margin_right = 696.0
-margin_bottom = 369.0
+margin_left = 659.607
+margin_top = 326.873
+margin_right = 691.607
+margin_bottom = 358.873
 texture = ExtResource( 4 )
 
 [node name="Title" type="RichTextLabel" parent="."]
@@ -146,6 +143,7 @@ bbcode_enabled = true
 bbcode_text = "teste"
 text = "teste"
 script = SubResource( 9 )
+<<<<<<< HEAD
 
 [node name="tutorial" type="VBoxContainer" parent="."]
 margin_left = 120.0
@@ -199,3 +197,5 @@ text = "L_stick
 controla plataforma"
 align = 1
 valign = 1
+=======
+>>>>>>> 52b3ef802cfa52b17aa7f7649324b9dc8085b2cf
