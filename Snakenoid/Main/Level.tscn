@@ -1,61 +1,84 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main/Level.gd" type="Script" id=1]
-[ext_resource path="res://Objects/MapEdge.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Food.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Objects/Platform.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/PlatformInverse.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Snake/Ball.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Main/LooseScreen.gd" type="Script" id=7]
+[ext_resource path="res://Assets/grass.png" type="Texture" id=2]
+[ext_resource path="res://Objects/MapEdge.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Food.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/PlatformInverse.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Snake/Ball.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Main/LooseScreen.gd" type="Script" id=8]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -13.0
+margin_top = -10.0
+margin_right = 1038.0
+margin_bottom = 612.0
+texture = ExtResource( 2 )
+stretch_mode = 2
 
 [node name="Edges" type="Node2D" parent="."]
 position = Vector2( 1032.02, 304.148 )
 rotation = 1.5708
 
-[node name="MapEdge" parent="Edges" instance=ExtResource( 2 )]
+[node name="MapEdge" parent="Edges" instance=ExtResource( 3 )]
 position = Vector2( -314.146, 519.021 )
 rotation = -1.5708
 
-[node name="MapEdge2" parent="Edges" instance=ExtResource( 2 )]
+[node name="MapEdge2" parent="Edges" instance=ExtResource( 3 )]
 position = Vector2( 305.854, 520.019 )
 rotation = -1.5708
 
-[node name="MapEdge3" parent="Edges" instance=ExtResource( 2 )]
+[node name="MapEdge3" parent="Edges" instance=ExtResource( 3 )]
 position = Vector2( -4.14429, 1042.02 )
 
-[node name="MapEdge4" parent="Edges" instance=ExtResource( 2 )]
+[node name="MapEdge4" parent="Edges" instance=ExtResource( 3 )]
 position = Vector2( -0.148041, -1.97998 )
 
-[node name="Food" parent="." instance=ExtResource( 3 )]
+[node name="Food" parent="." instance=ExtResource( 4 )]
 position = Vector2( 426.321, 238.653 )
 
 [node name="Platforms" type="Node2D" parent="."]
 
-[node name="Platform2" parent="Platforms" instance=ExtResource( 4 )]
+[node name="Platform2" parent="Platforms" instance=ExtResource( 5 )]
 position = Vector2( 510, 620 )
 rotation = 1.5708
 scale = Vector2( 2, 3 )
 
+<<<<<<< HEAD
 [node name="Platform4" parent="Platforms" instance=ExtResource( 4 )]
 position = Vector2( 499, -18 )
+=======
+[node name="Platform4" parent="Platforms" instance=ExtResource( 5 )]
+position = Vector2( 500, -20 )
+>>>>>>> 6b7b052d2541b8fc50400eac92ca28f6e1dcb024
 rotation = -1.5708
 scale = Vector2( 2, 3 )
 
+<<<<<<< HEAD
 [node name="PlatformInverse" parent="Platforms" instance=ExtResource( 5 )]
 position = Vector2( 50, 293 )
 scale = Vector2( 2, 3 )
 
 [node name="PlatformInverse2" parent="Platforms" instance=ExtResource( 5 )]
 position = Vector2( 970, 300 )
+=======
+[node name="PlatformInverse" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 54, 300 )
+scale = Vector2( 2, 3 )
+
+[node name="PlatformInverse2" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 970, 307 )
+>>>>>>> 6b7b052d2541b8fc50400eac92ca28f6e1dcb024
 rotation = -3.14159
 scale = Vector2( 2, 3 )
 
 [node name="PhantomPlatforms" type="Node2D" parent="."]
 
-[node name="Ball" parent="." instance=ExtResource( 6 )]
+[node name="Ball" parent="." instance=ExtResource( 7 )]
 position = Vector2( 283, 175 )
 
 [node name="PointCounter" type="HBoxContainer" parent="."]
@@ -84,7 +107,7 @@ margin_top = -20.0
 margin_right = 1040.0
 margin_bottom = 620.0
 color = Color( 0, 0, 0, 0.686275 )
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="LooseScreen"]
 anchor_left = 0.5

@@ -1,8 +1,17 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/Platform.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
 
+<<<<<<< HEAD
+=======
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.7273, 25 )
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/plataformer.png-17fc383d75b1b032d07c688e88ac088d.stex"
+
+>>>>>>> 6b7b052d2541b8fc50400eac92ca28f6e1dcb024
 [node name="Platform" type="KinematicBody2D" groups=[
 "Platform",
 ]]
@@ -16,8 +25,9 @@ polygon = PoolVector2Array( -6.2727, -26, -8.2727, -23, -8.2727, 23, -6.2727, 26
 
 [node name="icon" type="Sprite" parent="."]
 position = Vector2( -17.7372, 0 )
-scale = Vector2( 0.263619, 0.8132 )
-texture = ExtResource( 2 )
+rotation = 1.57079
+scale = Vector2( 0.503619, 0.493199 )
+texture = SubResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( -3.11227, 0 )
