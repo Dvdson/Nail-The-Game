@@ -4,7 +4,6 @@ var type = TYPE_NORMAL setget set_type
 var can_control = true
 export var vel_module = 600
 
-
 func get_transform():
 	return transform
 
@@ -29,21 +28,21 @@ func set_type(new_type):
 			can_control = false
 
 func _physics_process(delta):
-	var velocity = Vector2()
-	var strength = 0
-	var run = 1
 	if can_control:
+		var run = 1
+		var velocity = Vector2()
 		if Input.is_action_pressed("button_left"):
-			strength = Input.get_action_strength("button_left")
-			velocity.y += -1.0
+			var strength = Input.get_action_strength("button_left")
+			velocity.y += -1.0 * strength
 		if Input.is_action_pressed("button_right"):
-			strength = Input.get_action_strength("button_right")
-			velocity.y += 1.0
+			var strength = Input.get_action_strength("button_right")
+			velocity.y += 1.0 * strength
 		if Input.is_action_pressed("square"):
 			run = 3
-		velocity *= vel_module * run * strength
+		print(velocity)
+		velocity *= (vel_module * run)
 		velocity = velocity.rotated(rotation)
-		move_and_slide(velocity)
+		call_deferred("move_and_slide", velocity)
 
 func get_pivot_position():
 	return $"Position2D".get_global_position()
