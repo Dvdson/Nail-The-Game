@@ -3,6 +3,7 @@ onready var packedPlatform = preload("res://Objects/Platform.tscn")
 onready var packedBody = preload("res://SlitSnake/BodySlit.tscn")
 onready var last_body = $Ball
 var size = 0
+var game_end = false
 
 func spawn_phantom_platform(transf):
 	var phantom = packedPlatform.instance()
@@ -17,3 +18,11 @@ func _on_Food_food_collected():
 	size += 1
 	$PointCounter/points.text = str(size)
 	pass
+
+func _on_Ball_dead():
+	game_end = true
+
+func _process(delta):
+	if game_end:
+		if Input.is_action_just_pressed("ui_esc"):
+			get_tree().change_scene("res://Main/Main menu.tscn")
