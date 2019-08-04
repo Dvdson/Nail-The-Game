@@ -25,6 +25,9 @@ func set_type(new_type):
 var vel_module = 300
 var direction = Vector2(0.3,1)#ball direction
 
+func get_velocity():
+	return direction*vel_module
+
 func _physics_process(delta):
 	var collision = move_and_collide(direction.normalized()*vel_module*delta)
 	if collision != null:
@@ -39,7 +42,7 @@ func _physics_process(delta):
 				ricochet_direction = ricochet_direction.normalized()
 				direction = ricochet_direction
 				#spawn phantom
-				_spawn_phantom(collision.collider.get_transform())
+				#_spawn_phantom(collision.collider.get_transform())
 			32:#phantom
 				if type == TYPE_ASS:
 					#destroy phantom
