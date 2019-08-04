@@ -41,9 +41,10 @@ margin_right = 1023.0
 margin_bottom = 596.0
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[center][u]Programmers[/u]
-Felipe Higino Paixão da Silva
-Davidson Lucas Novais Nicácio
+bbcode_text = "[center][u]Developers[/u]
+Felipe Higino Paixão da Silva - Programming
+Davidson Lucas Novais Nicácio - Programming
+Luiz Anselmo Cardoso de Sá - Sonoplasty
 
 [u]Assets Terceiros[/u]
 Isometric snakes by yolkati
@@ -55,9 +56,10 @@ Casual Game Button Pack by pzUH
 
 Pressione ESC para sair.
 [/center]"
-text = "Programmers
-Felipe Higino Paixão da Silva
-Davidson Lucas Novais Nicácio
+text = "Developers
+Felipe Higino Paixão da Silva - Programming
+Davidson Lucas Novais Nicácio - Programming
+Luiz Anselmo Cardoso de Sá - Sonoplasty
 
 Assets Terceiros
 Isometric snakes by yolkati
