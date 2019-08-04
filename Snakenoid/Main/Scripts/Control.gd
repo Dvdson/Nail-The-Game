@@ -20,10 +20,10 @@ func _process(delta):
 		if(selected < scenes.size()):
 			get_tree().change_scene(scenes[selected])
 		
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("button_left"):
 		if(selected > 0):
 			set_selected(selected - 1)
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("button_right"):
 		if(selected < sel_list.size() - 1):
 			set_selected(selected+1)
 
