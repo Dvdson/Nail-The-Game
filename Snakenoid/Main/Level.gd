@@ -1,16 +1,10 @@
 extends Node2D
-onready var packedPlatform = preload("res://Objects/Platform.tscn")
 onready var packedBody = preload("res://SlitSnake/BodySlit.tscn")
 onready var last_body = $Ball
 onready var loose_screen = get_node("LooseScreen")
 var size = 0
 var game_end = false
 
-func spawn_phantom_platform(transf):
-	var phantom = packedPlatform.instance()
-	phantom.set_type(1)
-	phantom.transform = transf
-	$PhantomPlatforms.add_child(phantom)
 
 func _on_Food_food_collected():
 	var new_body = packedBody.instance()
