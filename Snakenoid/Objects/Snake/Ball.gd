@@ -22,7 +22,7 @@ func set_type(new_type):
 			set_collision_mask_bit(8, true)#collides with ass
 
 #properties
-var vel_module = 300
+export var vel_module = 300
 var direction = Vector2(0.3,1)#ball direction
 
 func get_velocity():

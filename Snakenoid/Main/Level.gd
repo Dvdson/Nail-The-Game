@@ -2,6 +2,7 @@ extends Node2D
 onready var packedPlatform = preload("res://Objects/Platform.tscn")
 onready var packedBody = preload("res://SlitSnake/BodySlit.tscn")
 onready var last_body = $Ball
+onready var loose_screen = get_node("LooseScreen")
 var size = 0
 var game_end = false
 
@@ -21,6 +22,7 @@ func _on_Food_food_collected():
 
 func _on_Ball_dead():
 	game_end = true
+	loose_screen.show_it()
 
 func _process(delta):
 	if game_end:
